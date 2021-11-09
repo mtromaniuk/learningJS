@@ -1,3 +1,5 @@
+const { copyFileSync } = require("fs");
+
 const firstNumber = document.getElementById("firstNumber");
 const secondNumber = document.getElementById("secondNumber");
 const sendButton = document.querySelector('#sendBtn');
@@ -10,7 +12,20 @@ const secondRolledNumber = document.querySelector('.secondRolledNumber');
 const divideRadomNumbers = document.querySelector('#divideNumbers');
 const resultDivide = document.querySelector('.resultOfDivide');
 const resultDivideSmall = document.querySelector('.resultOfDivideSmall');
-let switchBtn = document.querySelector('#switchTypeBtn');
+
+function switchBtnFunction() {
+    let switchBtn = document.querySelector('#switchTypeBtn');
+    console.log(switchBtn);
+    if(switchBtn.value == "false") {
+        switchBtn.innerHTML = "Off";
+        switchBtn.value = "true";
+    } else if(switchBtn.value == "true") {
+        switchBtn.innerHTML = "On";
+        switchBtn.value = "false";
+    } else {
+        console.log("The switchBtn has an error.")
+    }
+}
 
 sendButton.onclick = function calculate() {
     let results = parseInt(firstNumber.value) + parseInt(secondNumber.value);
