@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="work.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <button id="switchTypeBtn" onclick="switchBtnFunction()">On</button>
+
+        <div class="container--firstNumber">
+            <label for="firstNumber">Pierwsza liczba</label>
+            <input id='firstNumber' class="inputsStyle">    
+        </div>
+
+       <div class="container--secondNumber">
+           <label for="#secondNumber">Druga liczba</label>
+            <input id="secondNumber" class="inputsStyle">
+       </div>
+
+        <div class="container--submit">
+            <button type='button' id="sendBtn" onclick="calculate()">Send</button>
+        </div>
+
+        <div class="container--result">
+            <div class="container--result__result"></div>
+            <div class="container--result__resultSmall"></div>
+        </div>
+
+        <div class="randomNumbersContainer">
+            <button id="rollNumberBtn">Roll number</button>
+
+            <label for=".firstRolledNumber">First number:</label>
+            <div class="firstRolledNumber rollContainer">
+                
+            </div>
+
+            <label for=".secondRolledNumber">Second number:</label>
+            <div class="secondRolledNumber rollContainer">
+                
+            </div>
+            <button id="divideNumbers">Divide</button>
+
+            <div class="container--result">
+                <div class="resultOfDivide container--result__result"></div>
+                <div class="resultOfDivideSmall container--result__resultSmall"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="myscripts.js"></script>
+</body>
+</html>
