@@ -8,46 +8,64 @@
 </head>
 <body>
     <div class="container">
-        <button type="button" id="switchTypeBtn" value="false" onclick="switchBtnFunction()">Off</button>
+        <div class="container--switchBtn">
+            <button type="button" id="switchTypeBtn" value="true" onclick="switchBtnFunction()">Off</button>
+        </div>
+        
+        <div class="container--addNumbersByHand">
+            <div class="container--addNumbersByHand__firstNumber addNumbersByHandStyle">
+                <label for="firstNumber">Pierwsza liczba</label>
+                <input id='firstNumber' class="inputsStyle" placeholder="Add first number">    
+            </div>
+    
+           <div class="container--addNumbersByHand__secondNumber addNumbersByHandStyle">
+               <label for="#secondNumber">Druga liczba</label> 
+                <input id="secondNumber" class="inputsStyle" placeholder="Add second number">
+           </div>
+        </div>
+        
+        <div class="container--rollNumbersContainer">
+            <button id="rollNumberBtn">Roll number</button>
+            <div class="rollNumbersContainerWithLabel">
+                <label for=".firstRolledNumber">First number:</label>
+                <div class="firstRolledNumber rollContainer">
+                </div>
+            </div>
 
-        <div class="container--firstNumber">
-            <label for="firstNumber">Pierwsza liczba</label>
-            <input id='firstNumber' class="inputsStyle">    
+            <div class="rollNumbersContainerWithLabel">
+                <label for=".secondRolledNumber">Second number:</label>
+                <div class="secondRolledNumber rollContainer">
+                
+                </div>
+            </div>
+        </div>
+    <div class="container--calculateBtns">
+        <div class="calculateBtns__calculateAddedNumbers">
+            <button type='button' id="calculateAddedNumbers" class="calcualteBtn" onclick="calculate()">Calculate all</button>
         </div>
 
-       <div class="container--secondNumber">
-           <label for="#secondNumber">Druga liczba</label>
-            <input id="secondNumber" class="inputsStyle">
-       </div>
+        <div class="calculateBtns__randomNumbersContainer">
+            <button id="additionNumbers" class="calcualteBtn"> + </button>
+            <button id="subtractionNumbers" class="calcualteBtn"> - </button>
+            <button id="divideNumbers" class="calcualteBtn"> / </button>
+            <button id="multiplicationNumbers" class="calcualteBtn"> * </button>
+        </div>
+    </div>
+       
 
-        <div class="container--submit">
-            <button type='button' id="sendBtn" onclick="calculate()">Send</button>
+    <div class="container--results">
+         <!-- result of rolled numbers -->
+         <div class="container--result">
+            <div class="resultOfDivide container--result__result "></div>
+            <div class="resultOfDivideSmall container--result__resultSmall"></div>
         </div>
 
+        <!-- result of added numbers by hand -->
         <div class="container--result">
             <div class="container--result__result"></div>
             <div class="container--result__resultSmall"></div>
         </div>
-
-        <div class="randomNumbersContainer">
-            <button id="rollNumberBtn">Roll number</button>
-
-            <label for=".firstRolledNumber">First number:</label>
-            <div class="firstRolledNumber rollContainer">
-                
-            </div>
-
-            <label for=".secondRolledNumber">Second number:</label>
-            <div class="secondRolledNumber rollContainer">
-                
-            </div>
-            <button id="divideNumbers">Divide</button>
-
-            <div class="container--result">
-                <div class="resultOfDivide container--result__result"></div>
-                <div class="resultOfDivideSmall container--result__resultSmall"></div>
-            </div>
-        </div>
+    </div>
     </div>
 
     <script src="myscripts.js"></script>
