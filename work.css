@@ -1,14 +1,15 @@
 .inputsStyle {
     margin: 3px;
-    height: 20px;
-    width: 100px;
+    height: 15px;
+    width: 110px;
     text-align: center;
+    font-size: 13px;
+    border: 1px solid black;
 }
 
 /* switch btn things */
 
 .container--switchBtn {
-    background-color: red;
     display: inline-block;
     float: right;
 }
@@ -23,7 +24,6 @@
 /* added numbers things */
 
 .container--addNumbersByHand {
-    background-color: royalblue;
     display: inline-flex;
     margin: 10px 10px 10px 0px;
 }
@@ -40,13 +40,11 @@
 
 .container--rollNumbersContainer {
     padding: 0px;
-    background-color: salmon;
     display: flex;
     margin: 5px 0px;
 }
 
 .rollNumbersContainerWithLabel  {
-    background-color: sienna;
     padding: 5px;
     display: inline-block;
     margin-left: 40px;
@@ -54,10 +52,11 @@
 
 .rollContainer {
     padding: 5px;
-    background-color: seagreen;
-    height: 20px;
-    width: 100px;
+    border: 1px solid black;
+    height: 15px;
+    width: 110px;
     text-align: center;
+    font-size: 16px;
 }
 
 #rollNumberBtn {
@@ -70,16 +69,17 @@
 .container--calculateBtns {
     display: flex;
     justify-content: space-around;
+    height: fit-content;
+    width: fit-content;
+    margin-left: 122px;
 }
 
 .calculateBtns__calculateAddedNumbers {
-    background-color: steelblue;
     display: inline-flex;
     margin-right: 20px;
 }
 
 .calculateBtns__randomNumbersContainer {
-    background-color: steelblue;
     display: inline-block;
 }
 
@@ -94,7 +94,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    background-color: yellowgreen;
     margin: 20px 0px;
 }
 
