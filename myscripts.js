@@ -64,6 +64,11 @@ calcAddNumbers.onclick = function calculate() {
         contDivi.textContent = `Divide: ${firstNumber.value} / ${secondNumber.value} = ${resultsDivide.toFixed(2)}`;
         firstNumber.value = "";
         secondNumber.value = "";
+
+        deleteContainer.onclick = function(countContainers) {
+            addNewContainer.remove();
+            arrayIndexContainers.splice(countContainers, 1);
+        }
     }
 }
 

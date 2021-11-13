@@ -101,12 +101,12 @@
     font-size: 20px;
     background-color: rgb(195, 196, 194);
     height: 250px;
-    width: 200px;
+    width: 230px;
     text-align: center;
     padding: 10px;
     margin: 5px;
     border: 1px solid black; 
-     display: block;
+    display: block;
 }
    
 .container--result__result {
