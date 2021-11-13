@@ -1,14 +1,114 @@
-.container--result {
- font-size: 20px;
- background-color: rgb(195, 196, 194);
- height: 150px;
- width: 150px;
- text-align: center;
- padding: 10px;
- margin: 5px;
- border: 1px solid black;  
+.inputsStyle {
+    margin: 3px;
+    height: 15px;
+    width: 110px;
+    text-align: center;
+    font-size: 13px;
+    border: 1px solid black;
 }
 
+/* switch btn things */
+
+.container--switchBtn {
+    display: inline-block;
+    float: right;
+}
+
+#switchTypeBtn {
+    height: 50px;
+    width: 120px;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+/* added numbers things */
+
+.container--addNumbersByHand {
+    display: inline-flex;
+    margin: 10px 10px 10px 0px;
+}
+
+.addNumbersByHandStyle {
+    padding: 8px;
+}
+
+.addNumbersByHandStyle:focus {
+    background-color: snow;
+}
+
+/* roll things */
+
+.container--rollNumbersContainer {
+    padding: 0px;
+    display: flex;
+    margin: 5px 0px;
+}
+
+.rollNumbersContainerWithLabel  {
+    padding: 5px;
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.rollContainer {
+    padding: 5px;
+    border: 1px solid black;
+    height: 15px;
+    width: 110px;
+    text-align: center;
+    font-size: 16px;
+}
+
+#rollNumberBtn {
+    height: 80px;
+    width: 80px;
+    font-weight: 600;
+}
+
+/* calculate buttons  */
+.container--calculateBtns {
+    display: flex;
+    justify-content: space-around;
+    height: fit-content;
+    width: fit-content;
+    margin-left: 122px;
+}
+
+.calculateBtns__calculateAddedNumbers {
+    display: inline-flex;
+    margin-right: 20px;
+}
+
+.calculateBtns__randomNumbersContainer {
+    display: inline-block;
+}
+
+.calculateBtn {
+    font-size: 40px;
+    padding: 5px;
+}
+
+
+/* results things */
+.container--results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 20px 0px;
+}
+
+.container--result {
+    font-size: 20px;
+    background-color: rgb(195, 196, 194);
+    height: 150px;
+    width: 150px;
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid black; 
+     
+}
+   
 .container--result__result {
     text-align: center;
     display: flexbox;
@@ -17,7 +117,7 @@
     margin: 5px 0px;
     color: rgb(165, 24, 90);
 }
-
+   
 .container--result__resultSmall {
     text-align: center;
     display: flexbox;
@@ -25,8 +125,4 @@
     align-items: center;
     margin: 5px 0px;
     color: rgb(42, 111, 238);
-}
-
-.inputsStyle {
-    margin: 3px;
 }

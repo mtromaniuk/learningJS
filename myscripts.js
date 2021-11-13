@@ -1,8 +1,6 @@
-const { copyFileSync } = require("fs");
-
 const firstNumber = document.getElementById("firstNumber");
 const secondNumber = document.getElementById("secondNumber");
-const sendButton = document.querySelector('#sendBtn');
+const calcAddNumbers = document.querySelector('#calculateAddedNumbers');
 let resultDiv = document.querySelector('.container--result__result');
 const resultText = document.querySelector('.container--result');
 let resultTextSmall = document.querySelector('.container--result__resultSmall');
@@ -27,7 +25,7 @@ function switchBtnFunction() {
     }
 }
 
-sendButton.onclick = function calculate() {
+calcAddNumbers.onclick = function calculate() {
     let results = parseInt(firstNumber.value) + parseInt(secondNumber.value);
     resultDiv.textContent = results;
     resultDiv.textContent = `${firstNumber.value} + ${secondNumber.value} = ${results}`
