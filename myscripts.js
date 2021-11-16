@@ -1,15 +1,17 @@
-const firstNumber = document.getElementById("firstNumber");
-const secondNumber = document.getElementById("secondNumber");
+let firstNumber = document.getElementById("firstNumber");
+let secondNumber = document.getElementById("secondNumber");
 const calcAddNumbers = document.querySelector('#calculateAddedNumbers');
 let resultDiv = document.querySelector('.container--result__result');
 const resultText = document.querySelector('.container--result');
-let resultTextSmall = document.querySelector('.container--result__resultSmall');
 const rollNumberBtn = document.querySelector('#rollNumberBtn');
 const firstRolledNumber = document.querySelector('.firstRolledNumber');
 const secondRolledNumber = document.querySelector('.secondRolledNumber');
 const divideRadomNumbers = document.querySelector('#divideNumbers');
 const resultDivide = document.querySelector('.resultOfDivide');
 const resultDivideSmall = document.querySelector('.resultOfDivideSmall');
+const containerResults = document.querySelector('.container--results');
+let arrayIndexContainers = [];
+let countContainers = 0;
 
 function switchBtnFunction() {
     let switchBtn = document.querySelector('#switchTypeBtn');
@@ -26,11 +28,48 @@ function switchBtnFunction() {
 }
 
 calcAddNumbers.onclick = function calculate() {
-    let results = parseInt(firstNumber.value) + parseInt(secondNumber.value);
-    resultDiv.textContent = results;
-    resultDiv.textContent = `${firstNumber.value} + ${secondNumber.value} = ${results}`
-    resultTextSmall.textContent = `Sum result is: ${results}`
-    console.log('firstNumber.value', 'secondNumber.value')
+    console.log(firstNumber.value, secondNumber.value)
+    if(firstNumber.value=="" || secondNumber.value=="") {
+        console.log('You not have any added numbers. Fix it before you wil wish calculate them.')
+        resultText.textContent = `Error. You must have added numbers. Please, refresh page and try again.`;
+    } else {
+        countContainers++;
+        arrayIndexContainers.push(countContainers);
+        console.log(arrayIndexContainers);
+
+        let resultsAdd = parseInt(firstNumber.value) + parseInt(secondNumber.value);
+        let resultsSub = parseInt(firstNumber.value) - parseInt(secondNumber.value);
+        let resultsMulti = parseInt(firstNumber.value) * parseInt(secondNumber.value);
+        let resultsDivide = parseInt(firstNumber.value) / parseInt(secondNumber.value);
+        let addNewContainer = document.createElement("div");
+        let contAdd = document.createElement("div");
+        let contSub = document.createElement("div");
+        let contDivi = document.createElement("div");
+        let contMult = document.createElement("div");
+        let deleteContainer = document.createElement('button');
+
+        deleteContainer.id = "deleteContainerBtn";
+        deleteContainer.textContent = "X";
+        addNewContainer.className = "container--result";
+        containerResults.appendChild(addNewContainer);
+        addNewContainer.appendChild(deleteContainer);
+        addNewContainer.appendChild(resultDiv);
+        addNewContainer.appendChild(contAdd);
+        contAdd.textContent = `Sum: ${firstNumber.value} + ${secondNumber.value} = ${resultsAdd.toFixed(2)}`;
+        addNewContainer.appendChild(contSub);
+        contSub.textContent = `Sub: ${firstNumber.value} - ${secondNumber.value} = ${resultsSub.toFixed(2)}`;
+        addNewContainer.appendChild(contMult);
+        contMult.textContent = `Multi: ${firstNumber.value} * ${secondNumber.value} = ${resultsMulti.toFixed(2)}`;
+        addNewContainer.appendChild(contDivi);
+        contDivi.textContent = `Divide: ${firstNumber.value} / ${secondNumber.value} = ${resultsDivide.toFixed(2)}`;
+        firstNumber.value = "";
+        secondNumber.value = "";
+
+        deleteContainer.onclick = function(countContainers) {
+            addNewContainer.remove();
+            arrayIndexContainers.splice(countContainers, 1);
+        }
+    }
 }
 
 let numberOfClick = 1;

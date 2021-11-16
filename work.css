@@ -100,29 +100,20 @@
 .container--result {
     font-size: 20px;
     background-color: rgb(195, 196, 194);
-    height: 150px;
-    width: 150px;
+    height: 250px;
+    width: 230px;
     text-align: center;
     padding: 10px;
     margin: 5px;
     border: 1px solid black; 
-     
+    display: block;
 }
    
 .container--result__result {
     text-align: center;
-    display: flexbox;
+    display: block;
     justify-content: center;
     align-items: center;
     margin: 5px 0px;
     color: rgb(165, 24, 90);
-}
-   
-.container--result__resultSmall {
-    text-align: center;
-    display: flexbox;
-    justify-content: center;
-    align-items: center;
-    margin: 5px 0px;
-    color: rgb(42, 111, 238);
 }
