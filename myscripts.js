@@ -13,6 +13,10 @@ const containerResults = document.querySelector('.container--results');
 const switchBtn = document.querySelector('#switchTypeBtn');
 let arrayIndexContainers = [];
 let countContainers = 0;
+const addBtn = document.querySelector('#additionNumbers');
+const subBtn = document.querySelector('#subtractionNumbers');
+const mulBtn = document.querySelector('#multiplicationNumbers');
+const diviBtn = document.querySelector('#divideNumbers');
 
 function switchBtnFunction() {
     console.log(switchBtn);
@@ -30,10 +34,18 @@ function switchBtnFunction() {
 switchBtn.addEventListener("click", function() {
     if(switchBtn.value == "true") {
         calcAddNumbers.disabled = false;
-        activBtns.disabled = true;
+
+        addBtn.disabled = true;
+        subBtn.disabled = true;
+        mulBtn.disabled = true;
+        diviBtn.disabled = true;
     }  else if(switchBtn.value == "false"){
         calcAddNumbers.disabled = true;
-        activBtns.disabled = false;
+
+        addBtn.disabled = false;
+        subBtn.disabled = false;
+        mulBtn.disabled = false;
+        diviBtn.disabled = false;
     }
 }); 
 
