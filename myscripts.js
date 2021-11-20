@@ -6,7 +6,6 @@ const resultText = document.querySelector('.container--result');
 const rollNumberBtn = document.querySelector('#rollNumberBtn');
 const firstRolledNumber = document.querySelector('.firstRolledNumber');
 const secondRolledNumber = document.querySelector('.secondRolledNumber');
-const divideRadomNumbers = document.querySelector('#divideNumbers');
 const resultDivide = document.querySelector('.resultOfDivide');
 const resultDivideSmall = document.querySelector('.resultOfDivideSmall');
 const containerResults = document.querySelector('.container--results');
@@ -73,7 +72,7 @@ calcAddNumbers.onclick = function calculate() {
             let deleteContainer = document.createElement('button');
     
             deleteContainer.id = "deleteContainerBtn";
-            deleteContainer.textContent = "X";
+            deleteContainer.textContent = "x";
             addNewContainer.className = "container--result";
             containerResults.appendChild(addNewContainer);
             addNewContainer.appendChild(deleteContainer);
@@ -112,7 +111,7 @@ addBtn.onclick = function() {
         let deleteContainer = document.createElement('button');
 
         deleteContainer.id = "deleteContainerBtn";
-        deleteContainer.textContent = "X";
+        deleteContainer.textContent = "x";
         addNewContainer.className = "container--result";
         containerResults.appendChild(addNewContainer);
         addNewContainer.appendChild(deleteContainer);
@@ -144,7 +143,7 @@ subBtn.onclick = function() {
         let deleteContainer = document.createElement('button');
 
         deleteContainer.id = "deleteContainerBtn";
-        deleteContainer.textContent = "X";
+        deleteContainer.textContent = "x";
         addNewContainer.className = "container--result";
         containerResults.appendChild(addNewContainer);
         addNewContainer.appendChild(deleteContainer);
@@ -171,13 +170,13 @@ diviBtn.onclick = function() {
         arrayIndexContainers.push(countContainers);
         console.log(arrayIndexContainers);
 
-        let resultsDivide = parseInt(firstNumber.value) / parseInt(secondNumber.value);
+        let resultsDivide = parseFloat(firstNumber.value) / parseFloat(secondNumber.value);
         let addNewContainer = document.createElement("div");
         let contDivi = document.createElement("div");
         let deleteContainer = document.createElement('button');
 
         deleteContainer.id = "deleteContainerBtn";
-        deleteContainer.textContent = "X";
+        deleteContainer.textContent = "x";
         addNewContainer.className = "container--result";
         containerResults.appendChild(addNewContainer);
         addNewContainer.appendChild(deleteContainer);
@@ -203,13 +202,14 @@ mulBtn.onclick = function() {
         countContainers++;
         arrayIndexContainers.push(countContainers);
         console.log(arrayIndexContainers);
+
         let resultsMulti = parseFloat(firstNumber.value) * parseFloat(secondNumber.value);
         let addNewContainer = document.createElement("div");
         let contMult = document.createElement("div");
         let deleteContainer = document.createElement('button');
 
         deleteContainer.id = "deleteContainerBtn";
-        deleteContainer.textContent = "X";
+        deleteContainer.textContent = "x";
         addNewContainer.className = "container--result";
         containerResults.appendChild(addNewContainer);
         addNewContainer.appendChild(deleteContainer);
