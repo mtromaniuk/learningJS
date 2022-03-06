@@ -245,11 +245,11 @@ rollNumberBtn.onclick = function losTheNumbers() {
     }
 }
 
-divideRadomNumbers.onclick = function divide() {
-    let result = parseInt(rolledDigit) / parseInt(rolledSecondDigit);
-    result = result.toFixed(3);
-    console.log(rolledDigit, rolledSecondDigit);
-    resultDivide.textContent = `${rolledDigit} / ${rolledSecondDigit} = ${result}`;
-    resultDivideSmall.textContent = `Divide result is: ${result}`
-}
+// divideRadomNumbers.onclick = function divide() {
+//     let result = parseInt(rolledDigit) / parseInt(rolledSecondDigit);
+//     result = result.toFixed(3);
+//     console.log(rolledDigit, rolledSecondDigit);
+//     resultDivide.textContent = `${rolledDigit} / ${rolledSecondDigit} = ${result}`;
+//     resultDivideSmall.textContent = `Divide result is: ${result}`
+// }
 
